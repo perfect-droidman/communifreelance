@@ -34,7 +34,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: flcb456ivx
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
