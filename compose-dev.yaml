@@ -13,7 +13,7 @@ services:
         target: /var/run/docker.sock
 
   backend:
-    build: ./backend
+    build: ./src/backend
     ports:
       - "8000:8000"
     volumes:
@@ -22,7 +22,7 @@ services:
       - DATABASE_URL=postgres://postgres:flcb456ivx@db:5432/postgres
 
   frontend:
-    build: ./frontend
+    build: ./src/frontend
     ports:
       - "3000:3000"
     volumes:
