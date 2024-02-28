@@ -19,7 +19,7 @@ services:
     volumes:
       - ./backend:/app
     environment:
-      - DATABASE_URL=postgres://postgres:password@db:5432/postgres
+      - DATABASE_URL=postgres://postgres:flcb456ivx@db:5432/postgres
 
   frontend:
     build: ./frontend
