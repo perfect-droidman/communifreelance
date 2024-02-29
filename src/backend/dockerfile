@@ -22,6 +22,6 @@ EXPOSE 8000
 
 # Define the command to run your application
 # This can be a gunicorn command for production or the Django development server for development
-CMD ["gunicorn", "myproject.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "website.wsgi:application", "--bind", "0.0.0.0:8000"]
 # For development, you might use:
 # CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
