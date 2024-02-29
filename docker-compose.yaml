@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    image: backend:latest
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=myproject.settings
+    networks:
+      - app-network
+
+  frontend:
+    image: frontend:latest
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
