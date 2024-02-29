@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     image: backend:latest
-    build: ./backend
+    build: ./src/backend
     ports:
       - "8000:8000"
     environment:
@@ -13,7 +13,7 @@ services:
 
   frontend:
     image: frontend:latest
-    build: ./frontend
+    build: ./src/frontend
     ports:
       - "3000:3000"
     networks:
